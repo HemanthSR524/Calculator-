@@ -1,0 +1,184 @@
+/* General setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #9be1ff, #e3f2fd);
+  transition: background 0.3s ease;
+}
+
+/* Calculator container */
+.calc-container {
+  position: relative;
+}
+
+#theme-toggle {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Main calculator box */
+.calculator {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Display area */
+.display {
+  background: transparent;
+  text-align: right;
+  padding: 20px 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+  overflow: hidden;
+}
+
+#history {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  color: #666;
+}
+
+#result {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #222;
+  word-wrap: break-word;
+  transition: font-size 0.2s ease, color 0.3s ease;
+}
+
+/* Button layout */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  padding: 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.operator {
+  background-color: #b2ebf2;
+  color: #00796b;
+}
+
+.equals {
+  background-color: #00acc1;
+  color: white;
+}
+
+.action {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+/* ---------------- DARK MODE ---------------- */
+body.dark {
+  background: linear-gradient(135deg, #001f3f, #003366); /* Dark blue gradient */
+}
+
+/* Calculator box in dark mode */
+body.dark .calculator {
+  background-color: #0000;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Display text turns white */
+body.dark #result,
+body.dark #history {
+  color: #ffffff;
+}
+
+/* Button styles in dark mode */
+body.dark .btn {
+  background-color: #014f86; /* Muted blue */
+  color: #f0f0f0;
+}
+
+body.dark .operator {
+  background-color: #0288d1; /* Bright cyan-blue for operators */
+  color: #fff;
+}
+
+body.dark .equals {
+  background-color: #0277bd; /* Strong blue for equals */
+  color: white;
+}
+
+body.dark .action {
+  background-color: #01579b; /* Dark blue for actions */
+  color: #80deea;
+}
+/* ---------------- DARK MODE ---------------- */
+body.dark {
+  background: linear-gradient(135deg, #001f3f, #003366); /* Dark blue background */
+}
+
+/* Calculator box stays black */
+body.dark .calculator {
+  background-color: #000000; /* Black box */
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Display text turns white */
+body.dark #result,
+body.dark #history {
+  color: #ffffff;
+}
+
+/* Button styles in dark mode */
+body.dark .btn {
+  background-color: #1a1a1a; /* Very dark gray buttons */
+  color: #f0f0f0;
+}
+
+body.dark .operator {
+  background-color: #0288d1;
+  color: #ffffff;
+}
+
+body.dark .equals {
+  background-color: #0277bd;
+  color: white;
+}
+
+body.dark .action {
+  background-color: #333333;
+  color: #80deea;
+}
